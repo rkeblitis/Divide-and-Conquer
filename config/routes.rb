@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   # Home Controller
   root "home#index"
 
-  get   "/"     ,to: "users#new"         ,as: :signup
-  post  "/"     ,to: "users#create"
+  get   "/users"  ,to: "users#index"       ,as: :users
+  get   "/"       ,to: "users#new"         ,as: :signup
+  post  "/users"  ,to: "users#create"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
