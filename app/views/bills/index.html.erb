@@ -1,0 +1,10 @@
+<h1>Bills</h1>
+<% @bills.each do |bill| %>
+<li><%= bill.name  %></li><br>
+<ul>Amount:
+  <%= bill.amount %> dollars<br>
+</ul>
+<ul>Comments:
+  <%= bill.description %><br>
+</ul>
+<% end %>
