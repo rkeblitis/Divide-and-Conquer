@@ -9,8 +9,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create(params.require(:user).permit(:username, :email, :password, :password_confirmation))
-    redirect_to root_path
+    user = User.create(params.require(:user).permit(:username, :email, :password, :password_confirmation))
+    current_user(user.id)
+    redirect_to root_path, notice: "Welcome #{user.username}"
   end
 
 end
