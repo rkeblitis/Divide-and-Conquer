@@ -1,0 +1,9 @@
+<%= form_for Bill.new, html: {class: "form"} do |f| %>
+<%= f.label       "Bill" %><br>
+<%= f.text_field  :name %><br>
+<%= f.label       "Amount" %><br>
+<%= f.text_field  :amount %><br>
+<%= f.label       "Comment" %><br>
+<%= f.text_field  :description %><br>
+<%= f.submit      "Submit", :class => "btn btn-default" %>
+<%  end %>

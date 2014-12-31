@@ -11,7 +11,13 @@ Rails.application.routes.draw do
   # Sessions Controller
   get     "/signin"   ,to: "sessions#new"     ,as: :signin
   post    "/signin"   ,to: "sessions#create"
-  delete  "/signout"  ,to: "sessions#destroy" ,as: :signout   
+  delete  "/signout"  ,to: "sessions#destroy" ,as: :signout
+
+  # Bills Controller
+  get     "/bills"     ,to: "bills#index"      ,as: :bills
+  get     "/bill"      ,to: "bills#new"        ,as: :bill
+  post    "/bill"      ,to: "bills#create"
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

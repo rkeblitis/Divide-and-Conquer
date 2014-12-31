@@ -12,9 +12,9 @@ class UsersController < ApplicationController
     if @user = User.create(params.require(:user).permit(:username, :email, :password, :password_confirmation))
       session[:user_id] = @user.id
       current_user
-    redirect_to root_path, notice: "Welcome #{@current_user.username}"
-    raise
-
+      redirect_to root_path, notice: "Welcome #{@current_user.username}"
+    else
+      redirect_to root_path, notice: "Passwords did not match"
     end
   end
 
