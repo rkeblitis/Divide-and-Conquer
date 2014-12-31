@@ -10,30 +10,14 @@
 
 <% if logged_in? %>
 
-<div class="top-bar">
-  <%= link_to "Sign Out", signout_path(@current_user), method: :delete %>
-</div>
+  <%= link_to "Sign Out", signout_path, method: :delete %>
 
 <% else %>
 
-  <div class="col-xs-2 top-right">
-
-    <h2 class="yellow-text">Sign-Up</h2>
-
     <%= render "/users/new.html.erb" %>
-
-  </div>
-
-  <div class="col-xs-2 top-right">
-
-    <h2 class="yellow-text-2">Sign-In</h2>
-
     <%= render "/sessions/new.html.erb" %>
 
-  </div>
-
   <% end %>
-
 
 <%= yield %>
 
