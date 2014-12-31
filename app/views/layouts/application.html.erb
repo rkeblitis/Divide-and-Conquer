@@ -8,8 +8,16 @@
 </head>
 <body>
 
+<% if logged_in? %>
+
+  <%= link_to "Sign Out", signout_path, method: :delete %>
+
+<% else %>
   <%= render "/users/new.html.erb" %>
   <%= render "/sessions/new.html.erb" %>
+
+<% end %>
+
 
 <%= yield %>
 

@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     if @current_user != nil
-      ture
+      true
     else
       false
     end
