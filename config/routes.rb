@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   delete  "/signout"  ,to: "sessions#destroy" ,as: :signout
 
   # Bills Controller
-  get     "/bill"      ,to: "bills#new"        ,as: :bill
-  get     "/bills"     ,to: "bills#index"      ,as: :bills
-  post    "/bills"     ,to: "bills#create"
+  get     "/bill"     ,to: "bills#new"        ,as: :bill
+  get     "/bills"    ,to: "bills#index"      ,as: :bills
+  post    "/bills"    ,to: "bills#create"
 
 
 
