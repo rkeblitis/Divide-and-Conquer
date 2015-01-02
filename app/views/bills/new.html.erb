@@ -10,7 +10,8 @@
 
 
   <%= form_for Payment.new, html: {class: "form"} do |f| %>
-  <%= f.label "Username" %>
-  <%= check_box_tag :user_id, 1, params[:user_id] %> <br>
-
-  <% end %>
+    <% User.all.each do |user| %>
+    <%= f.label "#{user.username}" %>
+    <%= f.check_box(:user_id, { :multiple => true }, user) %>
+    <% end %>
+  <%end %>
