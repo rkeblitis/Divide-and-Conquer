@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   # Bills Controller
   get     "/bill"     ,to: "bills#new"        ,as: :bill
   get     "/bills"    ,to: "bills#index"      ,as: :bills
-  post    "/bills"    ,to: "bills#create"
+  post    "/bills"    ,to: "bills#create"     ,as: :payments
+
+
 
 
 

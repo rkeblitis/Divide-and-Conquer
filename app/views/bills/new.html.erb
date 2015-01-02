@@ -7,3 +7,10 @@
 <%= f.text_field  :description %><br>
 <%= f.submit      "Submit", :class => "btn btn-default" %>
 <%  end %>
+
+
+  <%= form_for Payment.new, html: {class: "form"} do |f| %>
+  <%= f.label "Username" %>
+  <%= check_box_tag :user_id, 1, params[:user_id] %> <br>
+
+  <% end %>
